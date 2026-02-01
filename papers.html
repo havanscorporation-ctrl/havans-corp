@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Papers | Havans Corporation</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header>
+        <h1>Havans Corporation</h1>
+        <p>Access Past Examination Papers & Resources</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="examinations.html">Examinations</a>
+        <a href="resources.html">Resources</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <main class="container">
+
+        <!-- CLICKABLE CARD -->
+        <a href="library.html" class="card-link">
+            <section id="intro" class="card clickable-card">
+                <h2>Welcome to the Papers Library</h2>
+                <p>
+                    Browse our collection of past examination papers.
+                    Learn how papers are structured, marked, and used.
+                </p>
+            </section>
+        </a>
+    
+        <!-- NORMAL CARD (NOT CLICKABLE) -->
+        <section id="subjects" class="card">
+            <h2>Subjects</h2>
+            <div class="subject-buttons">
+                <button onclick="showPapers('math')">Mathematics</button>
+                <button onclick="showPapers('physics')">Physics</button>
+                <button onclick="showPapers('ict')">ICT</button>
+            </div>
+            <div id="papers-list" style="margin-top:20px;"></div>
+        </section>
+    
+    </main>
+    
+    <footer>
+        <p>© 2026 Havans Corporation. All Rights Reserved.</p>
+    </footer>
+
+    <script src="papers.js"></script>
+</body>
+</html>

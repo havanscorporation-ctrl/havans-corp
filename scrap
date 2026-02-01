@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Daizy Help Assistant | Havans Corporation</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .chat-container {
+      max-width: 800px;
+      margin: 40px auto;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+      padding: 20px;
+    }
+
+    .chat-header {
+      background: #0b3c5d;
+      color: white;
+      padding: 15px;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .chat-message {
+      margin: 15px 0;
+      padding: 12px 15px;
+      border-radius: 18px;
+      max-width: 80%;
+    }
+
+    .bot {
+      background: #e1e5ea;
+      color: #333;
+    }
+
+    .user {
+      background: #0b3c5d;
+      color: white;
+      margin-left: auto;
+    }
+
+    .options button {
+      margin: 8px 5px;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 20px;
+      background: #1d2731;
+      color: white;
+      cursor: pointer;
+    }
+
+    .options button:hover {
+      background: #0b3c5d;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Havans Corporation</h1>
+  <p>Scenario Based Examinations | Learning Made Practical</p>
+</header>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="examinations.html">Examinations</a>
+  <a href="resources.html">Resources</a>
+  <a href="faq.html">Daizy</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<main>
+  <div class="chat-container">
+
+    <div class="chat-header">
+      <h2>Daizy 🤖</h2>
+      <p>Your Study & Exam Assistant</p>
+    </div>
+
+    <div class="chat-message bot">
+      Hello 👋 I am Daizy. How can I help you today?
+    </div>
+
+    <div class="options">
+      <button onclick="showAnswer(1)">What is Havans Corporation?</button>
+      <button onclick="showAnswer(2)">How are exams designed?</button>
+      <button onclick="showAnswer(3)">Who can use these exams?</button>
+      <button onclick="showAnswer(4)">Are answers provided?</button>
+    </div>
+
+    <div id="answer-area"></div>
+
+  </div>
+</main>
+
+<footer>
+  <p>© 2026 Havans Corporation. All rights reserved.</p>
+</footer>
+
+<script>
+  function showAnswer(choice) {
+    const area = document.getElementById("answer-area");
+    let reply = "";
+
+    if (choice === 1) {
+      reply = "Havans Corporation is an educational platform focused on scenario-based examinations that test understanding and real-life application.";
+    }
+    if (choice === 2) {
+      reply = "Our examinations are built around real-world scenarios. Learners solve one main task that integrates multiple topics.";
+    }
+    if (choice === 3) {
+      reply = "Our exams are suitable for Senior 1 to Senior 4 learners following a competency-based curriculum.";
+    }
+    if (choice === 4) {
+      reply = "Yes. Questions are published first, and solutions are added gradually as learners engage with the content.";
+    }
+
+    area.innerHTML = `
+      <div class="chat-message user">I want to know.</div>
+      <div class="chat-message bot">${reply}</div>
+    `;
+  }
+</script>
+
+</body>
+</html>

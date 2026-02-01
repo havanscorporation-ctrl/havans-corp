@@ -1,0 +1,135 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f4f6f8;
+}
+
+header {
+    background-color: #0b3c5d;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    background-color: #1d2731;
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 30px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+footer {
+    background-color: #0b3c5d;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+.clickable-card {
+    text-decoration: none;  /* remove underline */
+    color: inherit;         /* keep text color */
+    display: block;         /* make link fill the card */
+    cursor: pointer;        /* pointer cursor on hover */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .clickable-card:hover .card {
+    transform: scale(1.03);              /* zoom effect */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* shadow */
+  }
+html {
+    scroll-behavior: smooth;
+}  
+/* Remove default link styles */
+.card-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Only the clickable card */
+.clickable-card {
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Hover effect – feels like a button */
+.clickable-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+/* clean link wrapper */
+.card-link {
+    text-decoration: none;
+    color: inherit;
+}
+body {
+    background-image: url('background.png'); /* Adjust the path if needed */
+    background-repeat: repeat; /* repeats the image to cover the entire area */
+    background-size: auto; /* or 'contain' / 'cover' depending on effect */
+    background-position: center center; /* centers the image */
+    background-attachment: fixed; /* makes the background stay while scrolling */
+    background-color: #f0f0f0; /* fallback background color */
+  }
+  footer {
+    background-color: #f0f0f0; /* lighter color to make it less "bold" */
+    padding: 8px 10px;          /* reduce padding to make it smaller */
+    font-size: 12px;            /* smaller font size */
+    color: #666;                /* softer text color */
+    text-align: center;
+    border-top: 1px solid #ccc; /* optional: subtle border on top */
+  }
+  /* Base styles */
+body {
+    font-size: 16px;
+    padding: 20px;
+    margin: 0;
+  }
+  
+  /* Make images responsive */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Responsive adjustments for small screens */
+  @media (max-width: 600px) {
+    body {
+      font-size: 14px;
+      padding: 10px;
+    }
+  }
+  
